@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>University Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+      }
+      .sidebar {
+        height: 100vh;
+        width: 220px;
+        position: fixed;
+        background: #2c3e50;
+        color: #fff;
+        padding-top: 30px;
+      }
+      .sidebar .logo {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .sidebar .logo img {
+        width: 80px;
+        border-radius: 50%;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .sidebar ul li:hover {
+        background: #34495e;
+      }
+      .sidebar ul li.active {
+        background: #1abc9c;
+      }
+      .main-content {
+        margin-left: 240px;
+        padding: 30px;
+      }
+      .university-img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+      .media-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      .media-item {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        flex: 1 1 300px;
+        min-width: 300px;
+      }
+      .media-item video,
+      .media-item audio,
+      .media-item img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .media-item audio {
+        margin-top: 10px;
+      }
+      @media (max-width: 900px) {
+        .main-content {
+          margin-left: 0;
+        }
+        .sidebar {
+          position: relative;
+          width: 100%;
+          height: auto;
+        }
+        .media-section {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/47/University_logo.png"
+          alt="University Logo"
+        />
+        <h2>My University</h2>
+      </div>
+      <ul>
+        <li class="active">Home</li>
+        <li><a href="video.html">Video</a></li>
+        <li>Audio</li>
+        <li>Songs</li>
+        <li>Photo</li>
+        <li>Course</li>
+        <li>About</li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <img
+        class="university-img"
+        src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80"
+        alt="University Campus"
+      />
+      <div class="media-section">
+        <div class="media-item">
+          <h3>Campus Tour Video</h3>
+          <video controls>
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="media-item">
+          <h3>University Song</h3>
+          <audio controls>
+            <source
+              src="https://www.w3schools.com/html/horse.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="media-item">
+          <h3>Campus Photo</h3>
+          <img
+            src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80"
+            alt="Campus Photo"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
